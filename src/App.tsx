@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import ExpenseList from "./components/ExpenseList";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ExpenseFilter from "./components/ExpenseFilter";
 
 function App() {
   
@@ -14,14 +16,16 @@ function App() {
     { id: 5, description: "bbb", amount: 20, category: "utilities" },
   ]
   
-
   );
-  
+
   if (expenses.length == 0 ) return null
+
+
   
   return (
     <>
       <div>
+        <ExpenseFilter onSelectCategory={(category)=> console.log(category)}/>
         <ExpenseList
           expenses={expenses}
           onDelete={(id) => setExpenses(expenses.filter(e => e.id !== id)) }
