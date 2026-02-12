@@ -16,10 +16,10 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
       <table>
         <thead>
           <tr>
-            <th>Descriptio</th>
-            <th>Amount</th>
-            <th>Category</th>
-            <th></th>
+            <td>Description</td>
+            <td>Amount</td>
+            <td>Category</td>
+        
           </tr>
         </thead>
         <tbody>
